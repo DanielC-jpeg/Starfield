@@ -28,7 +28,7 @@ class Particle{
   void show(){
     noStroke();
     fill(myColor);
-  rect((float)myX,(float)myY,(float)((Math.random()*10)+4),(float)((Math.random()*10)+4), (float)((Math.random()*10)+4));
+ rect(myX,myY,30,30);
   }
 }
 class OddballParticle extends Particle{
@@ -39,8 +39,8 @@ class OddballParticle extends Particle{
     myColor=color(0,255,0);
   }
   void move(){
-    myX+=(int)(Math.random()*100)-1;
-    myY+=(int)(Math.random()*100)-1;
+    myX+=(int)(Math.random()*20)-1;
+    myY+=(int)(Math.random()*20)-1;
   }
   void show(){
     noStroke();
