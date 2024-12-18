@@ -12,14 +12,17 @@ void draw(){
   }
 }
 
-class Particle{
-  double myX,myY,myAngle,mySpeed;
+class Particle
+{
+  double myX,myY,mySpeed,myAngle;
   int myColor;
-  Particle(){
-    myX=myY=250;
-    myAngle=Math.random()*2*Math.PI;
-    mySpeed=Math.random()*10;
-    myColor=color(255,255,0);
+  Particle ()
+  {
+    myX = 400;
+    myY = 700;
+    myAngle = ((Math.random()*Math.PI)+Math.PI);
+    myColor = color((int)(Math.random()*255), (int)(Math.random()*157)+ 97,(int)(Math.random()*100)+140);
+    mySpeed = (Math.random()*20)+4;
   }
   void move(){
     myX+=Math.cos(myAngle)*mySpeed;
